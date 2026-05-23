@@ -1,0 +1,162 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Casos Complementares | Escolhas e Consequências</title>
+    <meta name="description" content="Casos complementares do livro Escolhas e Consequências de Erigutemberg Meneses. Material pedagógico para aprofundamento dos conceitos de neurociência da decisão.">
+    <meta name="author" content="Erigutemberg Meneses">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fas fa-puzzle-piece"></i></span>
+                    <span class="logo-text">Escolhas e Consequências</span>
+                </a>
+                <div class="header-subtitle">Casos Complementares</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Laboratório de Arquitetura Decisória</h1>
+                    <p>Casos reais e composições pedagógicas para aprofundamento dos conceitos de neurociência aplicada, economia comportamental e tomada de decisão no contexto brasileiro.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">22</span>
+                            <span class="stat-label">Casos complementares</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Capítulos relacionados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Material gratuito</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Bar -->
+        <section class="filter-bar">
+            <div class="container">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">Todos os casos</button>
+                    <button class="filter-btn" data-filter="publico">📋 Casos Públicos</button>
+                    <button class="filter-btn" data-filter="pedagogico">✍️ Composições Pedagógicas</button>
+                    <button class="filter-btn" data-filter="internacional">🌍 Internacionais</button>
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar caso por título, palavra-chave ou lição...">
+                </div>
+            </div>
+        </section>
+
+        <!-- Cases Grid -->
+        <section class="cases-section">
+            <div class="container">
+                <div class="cases-grid" id="casesGrid">
+                    <!-- Cases will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for Case Details -->
+        <div id="caseModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Escolhas e Consequências</strong> — Erigutemberg Meneses</p>
+                    <p>Material complementar ao livro. Os casos aqui apresentados são de domínio público ou composições pedagógicas com dados anonimizados.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" id="btn-metodologia"><i class="fas fa-book-open"></i> Nota Metodológica</a>
+                    <a href="#" id="btn-glossario"><i class="fas fa-glossary"></i> Glossário Rápido</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Erigutemberg Meneses. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals for Methodology and Glossary -->
+    <div id="metodologiaModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="modal-close-metodologia">&times;</span>
+            <div class="modal-header">
+                <h2>Nota Metodológica</h2>
+            </div>
+            <div class="modal-body">
+                <p><strong>Critérios de anonimização e composição pedagógica</strong></p>
+                <p>Casos envolvendo pessoas físicas ou empresas não listadas publicamente tiveram nomes, CNPJs, valores exatos e localizações precisas ajustados para preservar sigilo judicial e comercial, mantendo intacta a estrutura decisória e a lição neural.</p>
+                <p>Em situações específicas, utilizou-se <strong>composição pedagógica</strong> (fusão de eventos similares observados em varas, conselhos e mediações) para fins didáticos, respeitando a realidade observada.</p>
+                <p>Casos de <strong>domínio público</strong> foram extraídos de decisões judiciais (TJ, TRF, STJ), relatórios de órgãos reguladores (CVM, ANVISA, TCU, MPF) e literatura acadêmica brasileira, com todas as fontes citadas no livro.</p>
+                <hr>
+                <p><strong>Legendas visuais utilizadas nesta página:</strong></p>
+                <p><span class="badge-public">📋 Caso Público</span> — Caso documentado em fontes públicas</p>
+                <p><span class="badge-pedagogic">✍️ Composição Pedagógica</span> — Caso construído a partir de múltiplos eventos reais</p>
+                <p><span class="badge-international">🌍 Internacional</span> — Caso de referência global</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="glossarioModal" class="modal">
+        <div class="modal-content modal-medium">
+            <span class="modal-close-glossario">&times;</span>
+            <div class="modal-header">
+                <h2>Glossário Rápido</h2>
+            </div>
+            <div class="modal-body">
+                <div class="glossary-item">
+                    <strong>ACC (Córtex Cingulado Anterior)</strong>
+                    <p>Detector de conflitos do cérebro. Sinaliza "isso está errado". Quando ignorado repetidamente, seu sinal enfraquece — base da normalização do desvio.</p>
+                </div>
+                <div class="glossary-item">
+                    <strong>Amígdala</strong>
+                    <p>Centro de processamento de ameaças. Sob estresse agudo, pode "sequestrar" a deliberação racional.</p>
+                </div>
+                <div class="glossary-item">
+                    <strong>dlPFC (Córtex Pré-Frontal Dorsolateral)</strong>
+                    <p>Sede da memória de trabalho e deliberação consciente. Lento e caro metabolicamente.</p>
+                </div>
+                <div class="glossary-item">
+                    <strong>vmPFC (Córtex Pré-Frontal Ventromedial)</strong>
+                    <p>Filtro de valores e propósito. Quando alinhado, reduz conflito decisório.</p>
+                </div>
+                <div class="glossary-item">
+                    <strong>Desconto temporal hiperbólico</strong>
+                    <p>Tendência a supervalorizar recompensas imediatas e subvalorizar consequências futuras.</p>
+                </div>
+                <div class="glossary-item">
+                    <strong>Prediction error (Erro de previsão)</strong>
+                    <p>Sinal neural disparado quando o resultado difere da expectativa. Base biológica do aprendizado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
